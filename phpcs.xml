@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ruleset name="PHP_CodeSniffer">
+ <description>Own php-codesniffer</description>
+
+ <rule ref="PSR2.Classes.PropertyDeclaration"/>
+ <rule ref="PSR2.Methods.MethodDeclaration"/>
+ <rule ref="PSR2.Files.EndFileNewline"/>
+</ruleset>
