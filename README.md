@@ -14,7 +14,7 @@ phpcs -i
 ```
 git clone https://github.com/xuanquynh/php-codesniffer <Directory>
 ```
--- Check own source code.
+- Check own source code.
 ```
 phpcs --standard=/path/to/phpcs.xml /path/to/source --encoding=utf-8
 ```
