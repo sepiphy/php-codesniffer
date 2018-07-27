@@ -8,7 +8,7 @@
  *
  * @see https://github.com/wataridori/framgia-php-codesniffer/blob/0.2/Sniffs/Variable/ValidVariableNameSniff.php
  */
-namespace XuanQuynh\CodeSniffers\Sniffs\Variables;
+namespace XuanQuynh\CodeSniffer\Sniffs\Variables;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Util\Common;
