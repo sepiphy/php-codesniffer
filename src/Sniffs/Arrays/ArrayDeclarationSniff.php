@@ -7,7 +7,7 @@
  * @see https://github.com/wataridori/framgia-php-codesniffer/blob/0.2/Sniffs/Array/ArrayDeclarationSniff.php
  */
 
-namespace XuanQuynh\CodeSniffers\Sniffs\Arrays;
+namespace XuanQuynh\CodeSniffer\Sniffs\Arrays;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Util\Tokens;
