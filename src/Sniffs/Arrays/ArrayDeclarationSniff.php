@@ -1,13 +1,17 @@
 <?php
 /**
  * A test to ensure that arrays conform to the array coding standard. Use [] instead of array()
+ *
+ * Originally copy from https://github.com/wataridori/framgia-php-codesniffer
+ *
+ * @see https://github.com/wataridori/framgia-php-codesniffer/blob/0.2/Sniffs/Array/ArrayDeclarationSniff.php
  */
 
-namespace Framgia\Sniffs\Arrays;
+namespace XuanQuynh\CodeSniffers\Sniffs\Arrays;
 
-use PHP_CodeSniffer\Sniffs\Sniff;
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Util\Tokens;
+use PHP_CodeSniffer\Sniffs\Sniff;
 
 class ArrayDeclarationSniff implements Sniff
 {

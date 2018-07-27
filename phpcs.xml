@@ -1,8 +1,19 @@
 <?xml version="1.0"?>
-<ruleset name="PHP_CodeSniffer">
- <description>Own php-codesniffer</description>
+<ruleset name="XuanQuynh">
+    <description>Personal PHP Standards Checker by PHP CodeSniffer.</description>
 
- <rule ref="PSR2.Classes.PropertyDeclaration"/>
- <rule ref="PSR2.Methods.MethodDeclaration"/>
- <rule ref="PSR2.Files.EndFileNewline"/>
+    <arg name="tab-width" value="4"/>
+
+    <rule ref="PSR2"/>
+    <rule ref="Squiz.WhiteSpace.CastSpacing"/>
+    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing">
+        <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.LineAfterClose"/>
+    </rule>
+    <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace"/>
+    <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing"/>
+    <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
+
+    <rule ref="./src/Sniffs/Arrays/ArrayDeclarationSniff.php"/>
+    <rule ref="./src/Sniffs/Strings/DoubleQuoteUsageSniff.php"/>
+    <rule ref="./src/Sniffs/Variables/ValidVariableNameSniff.php"/>
 </ruleset>

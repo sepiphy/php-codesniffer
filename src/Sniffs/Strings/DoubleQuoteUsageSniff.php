@@ -4,11 +4,14 @@
  *
  * Makes sure that any use of Double Quotes ("") are warranted.
  *
+ * Originally copy from https://github.com/wataridori/framgia-php-codesniffer
+ *
+ * @see https://github.com/wataridori/framgia-php-codesniffer/blob/0.2/Sniffs/String/DoubleQuoteUsageSniff.php
  */
-namespace Framgia\Sniffs\Strings;
+namespace XuanQuynh\CodeSniffers\Sniffs\Strings;
 
-use PHP_CodeSniffer\Sniffs\Sniff;
 use PHP_CodeSniffer\Files\File;
+use PHP_CodeSniffer\Sniffs\Sniff;
 
 class DoubleQuoteUsageSniff implements Sniff
 {
