@@ -1,10 +1,10 @@
-# Package used to check PHP coding convention
-### About
+## About
 - Using php-codesniffer to check PHP coding convention.
-### Installation
+
+## Installation
 - Install php-codesniffer globally via composer.
 ```
-composer global require "squizlabs/php_codesniffer=^2.2.*"
+composer global require "squizlabs/php_codesniffer=^3.0"
 ```
 - Check if php-codesniffer is installed sucessfully.
 ```
