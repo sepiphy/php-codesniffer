@@ -14,6 +14,7 @@
     <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
 
     <rule ref="./src/Sniffs/Arrays/ArrayDeclarationSniff.php"/>
+    <rule ref="./src/Sniffs/Comments/CallableParametersCommentsSniff.php"/>
     <rule ref="./src/Sniffs/Comments/DisallowHashCommentsSniff.php"/>
     <rule ref="./src/Sniffs/Strings/DoubleQuoteUsageSniff.php"/>
     <rule ref="./src/Sniffs/Variables/ValidVariableNameSniff.php"/>
