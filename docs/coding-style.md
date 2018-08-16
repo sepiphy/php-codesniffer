@@ -1,0 +1,1 @@
+I references to [PSR-1](https://www.php-fig.org/psr/psr-1/), [PSR-2](https://www.php-fig.org/psr/psr-2/), [PSR-3](https://www.php-fig.org/psr/psr-3/), [Symfony's contributing](https://symfony.com/doc/current/contributing/code/standards.html) and [Laravel's contributing](https://laravel.com/docs/master/contributions).
