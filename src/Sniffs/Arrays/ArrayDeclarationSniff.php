@@ -64,7 +64,7 @@ class ArrayDeclarationSniff implements Sniff
         if ($content === $arrayEnd) {
             // Empty array, but if the brackets aren't together, there's a problem.
             if (($arrayEnd - $arrayStart) !== 1) {
-                $error = 'Empty array declaration must have no space between the parentheses or brackets';
+                $error = 'Empty array declaration must have no space between the parentheses or brackets.';
                 $phpcsFile->addError($error, $stackPtr, 'SpaceInEmptyArray');
 
                 // We can return here because there is nothing else to check. All code
@@ -562,30 +562,6 @@ class ArrayDeclarationSniff implements Sniff
             } else {
                 $phpcsFile->recordMetric($stackPtr, 'Array end comma', 'yes');
             }
-
-            $lastValueLine = false;
-            foreach ($indices as $value) {
-                if (empty($value['value']) === true) {
-                    // Array was malformed and we couldn't figure out
-                    // the array value correctly, so we have to ignore it.
-                    // Other parts of this sniff will correct the error.
-                    continue;
-                }
-
-                if ($lastValueLine !== false && $tokens[$value['value']]['line'] === $lastValueLine) {
-                    $error = 'Each value in a multi-line array must be on a new line';
-                    $fix   = $phpcsFile->addFixableError($error, $value['value'], 'ValueNoNewline');
-                    if ($fix === true) {
-                        if ($tokens[($value['value'] - 1)]['code'] === T_WHITESPACE) {
-                            $phpcsFile->fixer->replaceToken(($value['value'] - 1), '');
-                        }
-
-                        $phpcsFile->fixer->addNewlineBefore($value['value']);
-                    }
-                }
-
-                $lastValueLine = $tokens[$value['value']]['line'];
-            }//end foreach
         }//end if
 
         /*
