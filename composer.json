@@ -3,6 +3,11 @@
     "description": "Personal PHP Standards Checker by PHP CodeSniffer.",
     "type": "library",
     "license": "MIT",
+    "homepage": "https://github.com/xuanquynh/php-codesniffer",
+    "support": {
+        "issues": "https://github.com/xuanquynh/php-codesniffer/issues",
+        "source": "https://github.com/xuanquynh/php-codesniffer"
+    },
     "authors": [
         {
             "name": "Nguyen Xuan Quynh",
