@@ -30,7 +30,7 @@ class DisallowHashCommentsSniff implements Sniff
     {
         $tokens = $phpcsFile->getTokens();
         if ($tokens[$stackPtr]['content']{0} === '#') {
-            $error = 'Hash comments are prohibited; found "%s"';
+            $error = 'Hash comments are prohibited; found "%s".';
             $data  = array(trim($tokens[$stackPtr]['content']));
             $phpcsFile->addError($error, $stackPtr, 'Found', $data);
         }
