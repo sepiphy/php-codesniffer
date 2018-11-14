@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Framgia_Sniffs_Variable_ValidVariableNameSniff.
  *
@@ -8,6 +9,7 @@
  *
  * @see https://github.com/wataridori/framgia-php-codesniffer/blob/0.2/Sniffs/Variable/ValidVariableNameSniff.php
  */
+
 namespace XuanQuynh\CodeSniffer\Sniffs\Variables;
 
 use PHP_CodeSniffer\Files\File;
