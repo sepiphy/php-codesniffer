@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Framgia_Sniffs_String_DoubleQuoteUsageSniff.
  *
@@ -8,6 +9,7 @@
  *
  * @see https://github.com/wataridori/framgia-php-codesniffer/blob/0.2/Sniffs/String/DoubleQuoteUsageSniff.php
  */
+
 namespace XuanQuynh\CodeSniffer\Sniffs\Strings;
 
 use PHP_CodeSniffer\Files\File;
