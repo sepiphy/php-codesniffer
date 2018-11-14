@@ -39,12 +39,12 @@ class CallableParametersCommentsSniff implements Sniff
                     $spaces = $tokens[$stackPtr + 1]['content'];
 
                     if (strlen($spaces) !== 2) {
-                        $error = '"@param" notation must be followed by 2 spaces. Found ' . strlen($spaces) . ' spaces.';
+                        $error = '"@param" notation must be followed by exact 2 spaces. Found '.strlen($spaces).' spaces.';
                         $phpcsFile->addError($error, $stackPtr, 'CallableParamDoc');
                     }
                 } else {
-                    $error = '"@param" notation must be followed by 2 spaces. Found 0 space.';
-                        $phpcsFile->addError($error, $stackPtr, 'CallableParamDoc');
+                    $error = '"@param" notation must be followed by exact 2 spaces. Found 0 space.';
+                    $phpcsFile->addError($error, $stackPtr, 'CallableParamDoc');
                 }
             }
 
@@ -53,7 +53,7 @@ class CallableParametersCommentsSniff implements Sniff
                     $spaces = $tokens[$stackPtr + 1]['content'];
 
                     if (strlen($spaces) !== 1) {
-                        $error = '"@return" notation must be followed by 1 space. Found ' . strlen($spaces) . ' spaces.';
+                        $error = '"@return" notation must be followed by 1 space. Found '.strlen($spaces).' spaces.';
                         $phpcsFile->addError($error, $stackPtr, 'CallableReturnDoc');
                     }
                 } else {
@@ -67,7 +67,7 @@ class CallableParametersCommentsSniff implements Sniff
                     $spaces = $tokens[$stackPtr + 1]['content'];
 
                     if (strlen($spaces) !== 1) {
-                        $error = '"@throws" notation must be followed by 1 space. Found ' . strlen($spaces) . ' spaces.';
+                        $error = '"@throws" notation must be followed by 1 space. Found '.strlen($spaces).' spaces.';
                         $phpcsFile->addError($error, $stackPtr, 'CallableThrowsDoc');
                     }
                 } else {
