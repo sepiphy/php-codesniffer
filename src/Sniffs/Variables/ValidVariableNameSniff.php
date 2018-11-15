@@ -1,21 +1,14 @@
 <?php
 
-/**
- * Framgia_Sniffs_Variable_ValidVariableNameSniff.
- *
- * Checks the naming of variables and member variables.
- *
- * Originally copy from https://github.com/wataridori/framgia-php-codesniffer
- *
- * @see https://github.com/wataridori/framgia-php-codesniffer/blob/0.2/Sniffs/Variable/ValidVariableNameSniff.php
- */
-
 namespace XuanQuynh\CodeSniffer\Sniffs\Variables;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Util\Common;
 use PHP_CodeSniffer\Sniffs\AbstractVariableSniff;
 
+/**
+ * @link https://github.com/wataridori/framgia-php-codesniffer/blob/0.2/Sniffs/Variable/ValidVariableNameSniff.php
+ */
 class ValidVariableNameSniff extends AbstractVariableSniff
 {
 
