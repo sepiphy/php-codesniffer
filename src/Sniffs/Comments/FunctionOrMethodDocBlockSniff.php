@@ -39,7 +39,7 @@ class FunctionOrMethodDocBlockSniff implements Sniff
                     $spaces = $tokens[$stackPtr + 1]['content'];
 
                     if (strlen($spaces) !== 2) {
-                        $error = '"@param" notation must be followed by exact 2 spaces. Found '.strlen($spaces).' spaces.';
+                        $error = '"@param" notation must be followed by exact 2 spaces. Found '.strlen($spaces).' space(s).';
                         $phpcsFile->addError($error, $stackPtr, 'CallableParamDoc');
                     }
                 } else {
@@ -53,11 +53,11 @@ class FunctionOrMethodDocBlockSniff implements Sniff
                     $spaces = $tokens[$stackPtr + 1]['content'];
 
                     if (strlen($spaces) !== 1) {
-                        $error = '"@return" notation must be followed by 1 space. Found '.strlen($spaces).' spaces.';
+                        $error = '"@return" notation must be followed by exact 1 space. Found '.strlen($spaces).' space(s).';
                         $phpcsFile->addError($error, $stackPtr, 'CallableReturnDoc');
                     }
                 } else {
-                    $error = '"@return" notation must be followed by 1 space. Found 0 space.';
+                    $error = '"@return" notation must be followed by exact 1 space. Found 0 space.';
                     $phpcsFile->addError($error, $stackPtr, 'CallableReturnDoc');
                 }
             }
@@ -67,11 +67,11 @@ class FunctionOrMethodDocBlockSniff implements Sniff
                     $spaces = $tokens[$stackPtr + 1]['content'];
 
                     if (strlen($spaces) !== 1) {
-                        $error = '"@throws" notation must be followed by 1 space. Found '.strlen($spaces).' spaces.';
+                        $error = '"@throws" notation must be followed by exact 1 space. Found '.strlen($spaces).' space(s).';
                         $phpcsFile->addError($error, $stackPtr, 'CallableThrowsDoc');
                     }
                 } else {
-                    $error = '"@throws" notation must be followed by 1 space. Found 0 space.';
+                    $error = '"@throws" notation must be followed by exact 1 space. Found 0 space.';
                     $phpcsFile->addError($error, $stackPtr, 'CallableThrowsDoc');
                 }
             }
