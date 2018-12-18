@@ -1,20 +1,34 @@
 ## About
 - Using php-codesniffer to check PHP coding convention.
 
+## Requirements
+
+- Composer: ^1.8
+
 ## Installation
-- Install php-codesniffer globally via composer.
+
+Install xuanquynh/php-codesniffer globally via composer.
+
+```bash
+composer global require xuanquynh/php-codesniffer
 ```
-composer global require "squizlabs/php_codesniffer=^3.0"
+
+You have to add composer bin directory to $PATH enviroment variable.
+
+```bash
+export PATH="$PATH:$HOME/.composer/vendor/bin"
 ```
-- Check if php-codesniffer is installed sucessfully.
-```
+
+Check whether the phpcs have already been installed successfully.
+
+```bash
 phpcs -i
 ```
-- Clone own php-codesniffer repository.
-```
-git clone https://github.com/xuanquynh/php-codesniffer <Directory>
-```
-- Check own source code.
-```
-phpcs --standard=/path/to/phpcs.xml /path/to/source --encoding=utf-8
+
+## Usage
+
+- Check the coding convention of a PHP source code directory.
+
+```bash
+phpcs --standard=$HOME/.composer/vendor/xuanquynh/php-codesniffer/phpcs.xml /path/to/source
 ```
