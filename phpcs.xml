@@ -15,8 +15,9 @@
 
     <rule ref="./src/Sniffs/Arrays/ArrayDeclarationSniff.php"/>
     <rule ref="./src/Sniffs/Comments/DisallowHashCommentsSniff.php"/>
-    <rule ref="./src/Sniffs/Comments/FunctionOrMethodDocBlockSniff.php"/>
+    <rule ref="./src/Sniffs/Comments/FunctionOrMethodParamNotationSniff.php"/>
     <rule ref="./src/Sniffs/Comments/FunctionOrMethodReturnNotationSniff.php"/>
+    <rule ref="./src/Sniffs/Comments/FunctionOrMethodThrowsNotationSniff.php"/>
     <rule ref="./src/Sniffs/Strings/DoubleQuoteUsageSniff.php"/>
     <rule ref="./src/Sniffs/Variables/ValidVariableNameSniff.php"/>
 </ruleset>
