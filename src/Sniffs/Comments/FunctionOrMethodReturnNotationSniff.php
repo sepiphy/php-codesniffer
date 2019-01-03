@@ -47,8 +47,6 @@ class FunctionOrMethodReturnNotationSniff implements Sniff
                     $phpcsFile->addError($error, $stackPtr, 'CallableReturnDoc');
                 }
             }
-
-            return;
         }
 
         if ($tokens[$stackPtr]['code'] === T_FUNCTION) {
@@ -69,12 +67,15 @@ class FunctionOrMethodReturnNotationSniff implements Sniff
                     if ($tokens[$i]['code'] === T_DOC_COMMENT_TAG && strpos($tokens[$i]['content'], '@return') === 0) {
                         $hasRerturn = true;
                         break;
+                    } elseif ($tokens[$i]['code'] === T_DOC_COMMENT_STRING && strpos($tokens[$i]['content'], '{@inheritdoc}') === 0) {
+                        $hasInheritdoc = true;
+                        break;
                     }
                 }
             }
 
-            if (!isset($hasRerturn)) {
-                $error = 'A function or method must have the notation "@return".';
+            if (!isset($hasInheritdoc) && !isset($hasRerturn)) {
+                $error = 'A function or method must have the notation "@return" or "@inheritdoc".';
                 $phpcsFile->addError($error, $stackPtr, 'MethodOrFunctionReturnNotation');
             }
         }
