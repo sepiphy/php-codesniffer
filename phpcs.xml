@@ -15,6 +15,7 @@
 
     <rule ref="./src/Sniffs/Arrays/ArrayDeclarationSniff.php"/>
     <rule ref="./src/Sniffs/Comments/DisallowHashCommentsSniff.php"/>
+    <rule ref="./src/Sniffs/Comments/PropertyOrConstantCommentSniff.php"/>
     <rule ref="./src/Sniffs/Comments/FunctionOrMethodParamNotationSniff.php"/>
     <rule ref="./src/Sniffs/Comments/FunctionOrMethodReturnNotationSniff.php"/>
     <rule ref="./src/Sniffs/Comments/FunctionOrMethodThrowsNotationSniff.php"/>
