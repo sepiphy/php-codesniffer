@@ -19,7 +19,6 @@ class DisallowHashCommentsSniff implements Sniff
         ];
     }
 
-
     /**
      * Processes this sniff, when one of its tokens is encountered.
      *
