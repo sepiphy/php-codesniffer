@@ -38,11 +38,11 @@ class FunctionOrMethodThrowsCommentSniff implements Sniff
 
                 if (strlen($spaces) !== 1) {
                     $error = 'The notation "@throws" must be followed by exact 1 space. Found '.strlen($spaces).' space(s).';
-                    $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodThrowsNotation');
+                    $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodThrowsComment');
                 }
             } else {
                 $error = 'The notation "@throws" must be followed by exact 1 space. Found 0 space.';
-                $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodThrowsNotation');
+                $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodThrowsComment');
             }
         }
     }

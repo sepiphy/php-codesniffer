@@ -40,11 +40,11 @@ class FunctionOrMethodReturnCommentSniff implements Sniff
 
                     if (strlen($spaces) !== 1) {
                         $error = 'The notation "@return" must be followed by exact 1 space. Found '.strlen($spaces).' space(s).';
-                        $phpcsFile->addError($error, $stackPtr, 'CallableReturnDoc');
+                        $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodReturnComment');
                     }
                 } else {
                     $error = 'The notation "@return" must be followed by exact 1 space. Found 0 space.';
-                    $phpcsFile->addError($error, $stackPtr, 'CallableReturnDoc');
+                    $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodReturnComment');
                 }
             }
         }
@@ -75,8 +75,8 @@ class FunctionOrMethodReturnCommentSniff implements Sniff
             }
 
             if (!isset($hasInheritdoc) && !isset($hasRerturn)) {
-                $error = 'A function or method must have the notation "@return" or "@inheritdoc".';
-                $phpcsFile->addError($error, $stackPtr, 'MethodOrFunctionReturnNotation');
+                $error = 'A function or method must have the comment "@return <datatype>" or "@inheritdoc".';
+                $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodReturnComment');
             }
         }
     }
