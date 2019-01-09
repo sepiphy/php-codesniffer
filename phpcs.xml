@@ -19,6 +19,7 @@
     <rule ref="./src/Sniffs/Comments/FunctionOrMethodParamCommentSniff.php"/>
     <rule ref="./src/Sniffs/Comments/FunctionOrMethodReturnCommentSniff.php"/>
     <rule ref="./src/Sniffs/Comments/FunctionOrMethodThrowsCommentSniff.php"/>
+    <rule ref="./src/Sniffs/Comments/FunctionOrMethodOrderedCommentsSniff.php"/>
     <rule ref="./src/Sniffs/Strings/DoubleQuoteUsageSniff.php"/>
     <rule ref="./src/Sniffs/Variables/ValidVariableNameSniff.php"/>
 </ruleset>
