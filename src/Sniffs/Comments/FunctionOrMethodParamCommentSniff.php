@@ -39,11 +39,11 @@ class FunctionOrMethodParamCommentSniff implements Sniff
 
                     if (strlen($spaces) !== 2) {
                         $error = 'The notation "@param" must be followed by exact 2 spaces. Found '.strlen($spaces).' space(s).';
-                        $phpcsFile->addError($error, $stackPtr, 'MethodOrFunctionParamNotation');
+                        $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodParamComment');
                     }
                 } else {
                     $error = 'The notation "@param" must be followed by exact 2 spaces. Found 0 space.';
-                    $phpcsFile->addError($error, $stackPtr, 'MethodOrFunctionParamNotation');
+                    $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodParamComment');
                 }
             }
         } elseif ($tokens[$stackPtr]['code'] === T_DOC_COMMENT_STRING) {
@@ -53,14 +53,14 @@ class FunctionOrMethodParamCommentSniff implements Sniff
                 $dollarPos = strpos($tokens[$stackPtr]['content'], '$');
 
                 if ($spacesPos === false) {
-                    $error = 'The @param <datatype> must be followed by exact 2 spaces. Found 0 space.';
-                    $phpcsFile->addError($error, $stackPtr, 'MethodOrFunctionParamNotation');
+                    $error = 'The comment "@param  <datatype>" must be followed by exact 2 spaces. Found 0 space.';
+                    $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodParamComment');
                 } elseif ($dollarPos < $spacesPos) {
-                    $error = 'The @param <datatype> must not contain "$" character.';
-                    $phpcsFile->addError($error, $stackPtr, 'MethodOrFunctionParamNotation');
+                    $error = 'The comment "@param  <datatype>" must not contain "$" character.';
+                    $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodParamComment');
                 } elseif (($count = $dollarPos - $spacesPos) !== 2) {
-                    $error = 'The @param <datatype> must be followed by exact 2 spaces. Found '.$count.' space(s).';
-                    $phpcsFile->addError($error, $stackPtr, 'MethodOrFunctionParamNotation');
+                    $error = 'The comment "@param  <datatype>" must be followed by exact 2 spaces. Found '.$count.' space(s).';
+                    $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodParamComment');
                 }
             }
         }
