@@ -5,7 +5,7 @@ namespace XuanQuynh\CodeSniffer\Sniffs\Comments;
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
-class FunctionOrMethodParamNotationSniff implements Sniff
+class FunctionOrMethodParamCommentSniff implements Sniff
 {
     /**
      * Returns the token types that this sniff is interested in.
