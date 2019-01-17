@@ -1,8 +1,8 @@
-/vendor
-composer.phar
-composer.lock
-.DS_Store
-Thumbs.db
-/phpunit.xml
 /.idea
 /.vscode
+/vendor
+.DS_Store
+composer.phar
+composer.lock
+Thumbs.db
+phpunit.xml

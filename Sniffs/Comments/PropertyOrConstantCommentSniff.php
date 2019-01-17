@@ -32,11 +32,11 @@ class PropertyOrConstantVarCommentSniff implements Sniff
     {
         $tokens = $phpcsFile->getTokens();
 
-        if ($tokens[$stackPtr]['code'] === T_VARIABLE && in_array($tokens[$stackPtr - 2]['code'], [T_PRIVATE, T_PROTECTED, T_PUBLIC], true)) {
+        if ($tokens[$stackPtr]['code'] === T_VARIABLE && isset($tokens[$stackPtr - 2]) && in_array($tokens[$stackPtr - 2]['code'], [T_PRIVATE, T_PROTECTED, T_PUBLIC], true)) {
             $shouldCheckNotation = true;
-        } elseif ($tokens[$stackPtr]['code'] === T_VARIABLE && in_array($tokens[$stackPtr - 4]['code'], [T_PRIVATE, T_PROTECTED, T_PUBLIC], true)) {
+        } elseif ($tokens[$stackPtr]['code'] === T_VARIABLE && isset($tokens[$stackPtr - 4]) && in_array($tokens[$stackPtr - 4]['code'], [T_PRIVATE, T_PROTECTED, T_PUBLIC], true)) {
             $shouldCheckNotation = true;
-        } elseif ($tokens[$stackPtr]['code'] === T_CONST && in_array($tokens[$stackPtr - 2]['code'], [T_PRIVATE, T_PROTECTED, T_PUBLIC], true)) {
+        } elseif ($tokens[$stackPtr]['code'] === T_CONST && isset($tokens[$stackPtr - 2]) && in_array($tokens[$stackPtr - 2]['code'], [T_PRIVATE, T_PROTECTED, T_PUBLIC], true)) {
             $shouldCheckNotation = true;
         }
 
