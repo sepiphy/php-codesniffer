@@ -1,9 +1,8 @@
-## About
-- Using php-codesniffer to check PHP coding convention.
+# Checking PHP coding convention by CodeSniffer
 
 ## Requirements
 
-- Composer: ^1.8
+- Composer: ^1.1
 
 ## Installation
 

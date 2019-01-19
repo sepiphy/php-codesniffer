@@ -1,8 +1,9 @@
 {
     "name": "xuanquynh/php-codesniffer",
-    "description": "Personal PHP Standards Checker by PHP CodeSniffer.",
+    "description": "Checking PHP coding convention by CodeSniffer.",
     "type": "library",
     "license": "MIT",
+    "prefer-stable": true,
     "homepage": "https://github.com/xuanquynh/php-codesniffer",
     "support": {
         "issues": "https://github.com/xuanquynh/php-codesniffer/issues",
@@ -11,28 +12,26 @@
     "authors": [
         {
             "name": "Nguyễn Xuân Quỳnh",
-            "email": "nguyenxuanquynh2210vghy@gmail.com"
+            "email": "nguyenxuanquynh2210vghy@gmail.com",
+            "homepage": "https://nguyenquynh2210.com",
+            "role": "Software Developer"
         }
     ],
     "require": {
-        "squizlabs/php_codesniffer": "^3.0"
+        "wataridori/framgia-php-codesniffer": "^0.3"
     },
-    "require-dev": {
-        "symfony/var-dumper": "^4.1"
-    },
+    "require-dev": {},
     "autoload": {
         "psr-4": {
-            "XuanQuynh\\CodeSniffer\\": "src/"
+            "XuanQuynh\\CodeSniffer\\": "Sniffs/"
         }
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.2-dev"
+            "dev-master": "0.4-dev"
         }
     },
     "config": {
         "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
