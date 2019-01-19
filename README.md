@@ -2,32 +2,31 @@
 
 ## Requirements
 
-- Composer: ^1.1
+- PHP ^5.6.
+- Composer.
 
 ## Installation
 
-Install xuanquynh/php-codesniffer globally via composer.
+Install `xuanquynh/php-codesniffer` via composer.
 
 ```bash
-composer global require xuanquynh/php-codesniffer
-```
-
-You have to add composer bin directory to $PATH enviroment variable.
-
-```bash
-export PATH="$PATH:$HOME/.composer/vendor/bin"
-```
-
-Check whether the phpcs have already been installed successfully.
-
-```bash
-phpcs -i
+composer require "xuanquynh/php-codesniffer:^0.4" --dev
 ```
 
 ## Usage
 
-- Check the coding convention of a PHP source code directory.
+Check PHP coding convention of the project code directory.
 
 ```bash
-phpcs --standard=$HOME/.composer/vendor/xuanquynh/php-codesniffer/phpcs.xml /path/to/source
+vendor/bin/phpcs /path/to/source -p --standard=./vendor/xuanquynh/php-codesniffer/ruleset.xml
 ```
+
+## Contributing
+
+Thank you for considering contributing to `xuanquynh/php-codesniffer` package!
+
+Feel free to submit an issue or a pull request. All contributions are welcome.
+
+## License
+
+The `xuanquynh/php-codesniffer` package is open-sourced software licensed under the [MIT license](LICENSE.md).
