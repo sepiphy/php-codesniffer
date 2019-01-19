@@ -3,7 +3,6 @@
     "description": "Checking PHP coding convention by CodeSniffer.",
     "type": "library",
     "license": "MIT",
-    "prefer-stable": true,
     "homepage": "https://github.com/xuanquynh/php-codesniffer",
     "support": {
         "issues": "https://github.com/xuanquynh/php-codesniffer/issues",
@@ -33,5 +32,7 @@
     },
     "config": {
         "sort-packages": true
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
