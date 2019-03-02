@@ -1,6 +1,7 @@
 {
     "name": "xuanquynh/php-codesniffer",
     "description": "Checking PHP coding convention by CodeSniffer.",
+    "keywords": ["xuanquynh", "codesniffer"],
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/xuanquynh/php-codesniffer",
@@ -22,7 +23,7 @@
     "require-dev": {},
     "autoload": {
         "psr-4": {
-            "XuanQuynh\\CodeSniffer\\": "Sniffs/"
+            "XuanQuynh\\CodeSniffer\\Sniffs\\": "Sniffs/"
         }
     },
     "extra": {
