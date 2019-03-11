@@ -1,4 +1,6 @@
-# Checking PHP coding convention by CodeSniffer
+## About
+
+Checking PHP coding convention by CodeSniffer
 
 ## Requirements
 
@@ -25,7 +27,9 @@ vendor/bin/phpcs /path/to/source -p --standard=./vendor/xuanquynh/php-codesniffe
 
 Thank you for considering contributing to `xuanquynh/php-codesniffer` package!
 
-Feel free to submit an issue or a pull request. All contributions are welcome.
+Feel free to submit an issue or a pull request!
+
+All contributions are welcome.
 
 ## License
 
