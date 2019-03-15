@@ -2,6 +2,8 @@
 
 Check PHP coding convention by CodeSniffer.
 
+Support [XuanQuynh Coding Recommendations](https://github.com/xuanquynh/coding-recommendations/).
+
 ## Requirements
 
 - PHP: ^5.6
