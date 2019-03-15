@@ -1,6 +1,6 @@
 <?php
 
-namespace XuanQuynh\CodeSniffer\Sniffs\Comments;
+namespace XuanQuynh\CodeSniffer\Convention\Sniffs\Comments;
 
 use PHP_CodeSniffer\Sniffs\Sniff;
 use PHP_CodeSniffer\Files\File;

@@ -1,6 +1,6 @@
 {
     "name": "xuanquynh/php-codesniffer",
-    "description": "Checking PHP coding convention by CodeSniffer.",
+    "description": "Check PHP coding convention by CodeSniffer.",
     "keywords": ["xuanquynh", "codesniffer"],
     "type": "library",
     "license": "MIT",
@@ -18,17 +18,23 @@
         }
     ],
     "require": {
+        "illuminate/filesystem": "^5.8",
         "wataridori/framgia-php-codesniffer": "^0.3"
     },
     "require-dev": {},
     "autoload": {
         "psr-4": {
-            "XuanQuynh\\CodeSniffer\\Sniffs\\": "Sniffs/"
+            "XuanQuynh\\CodeSniffer\\": "src/"
         }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "XuanQuynh\\CodeSniffer\\Support\\ComposerScript::configureStandards"
+        ]
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.4-dev"
+            "dev-master": "1.0.0-dev"
         }
     },
     "config": {

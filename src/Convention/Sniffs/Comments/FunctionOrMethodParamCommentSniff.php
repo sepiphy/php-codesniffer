@@ -1,6 +1,6 @@
 <?php
 
-namespace XuanQuynh\CodeSniffer\Sniffs\Comments;
+namespace XuanQuynh\CodeSniffer\Convention\Sniffs\Comments;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
@@ -56,7 +56,7 @@ class FunctionOrMethodParamCommentSniff implements Sniff
                     $error = 'The comment "@param  <datatype>" must be followed by exact 2 spaces. Found 0 space.';
                     $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodParamComment');
                 } elseif ($dollarPos < $spacesPos) {
-                    $error = 'The comment "@param  <datatype>" must not contain "$" character.';
+                    $error = 'The "<datatype>" follows "@param" notation must not contain "$" character.';
                     $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodParamComment');
                 } elseif (($count = $dollarPos - $spacesPos) !== 2) {
                     $error = 'The comment "@param  <datatype>" must be followed by exact 2 spaces. Found '.$count.' space(s).';

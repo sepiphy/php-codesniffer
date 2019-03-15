@@ -1,18 +1,18 @@
 ## About
 
-Checking PHP coding convention by CodeSniffer
+Check PHP coding convention by CodeSniffer.
 
 ## Requirements
 
-- PHP ^5.6.
-- Composer.
+- PHP: ^5.6
+- Composer: *
 
 ## Installation
 
 Install `xuanquynh/php-codesniffer` via composer.
 
 ```bash
-composer require "xuanquynh/php-codesniffer:^0.4" --dev
+composer require "xuanquynh/php-codesniffer:1.0.0-dev" --dev
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ composer require "xuanquynh/php-codesniffer:^0.4" --dev
 Check PHP coding convention of the project code directory.
 
 ```bash
-vendor/bin/phpcs /path/to/source -p --standard=./vendor/xuanquynh/php-codesniffer/ruleset.xml
+vendor/bin/phpcs /path/to/source -p --standard=XuanQuynh
 ```
 
 ## Contributing
