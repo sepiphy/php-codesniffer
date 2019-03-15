@@ -12,7 +12,7 @@ Check PHP coding convention by CodeSniffer.
 Install `xuanquynh/php-codesniffer` via composer.
 
 ```bash
-composer require "xuanquynh/php-codesniffer:1.0.0-dev" --dev
+composer require "xuanquynh/php-codesniffer:^1.0-dev" --dev
 ```
 
 ## Usage
