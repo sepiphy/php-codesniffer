@@ -1,6 +1,6 @@
 <?php
 
-namespace XuanQuynh\CodeSniffer\Convention\Sniffs\Comments;
+namespace XuanQuynh\CodeSniffer\Standards\XuanQuynh\Sniffs\Comments;
 
 use PHP_CodeSniffer\Sniffs\Sniff;
 use PHP_CodeSniffer\Files\File;
@@ -32,7 +32,7 @@ class DisallowHashCommentsSniff implements Sniff
 
         if ($tokens[$stackPtr]['content']{0} === '#') {
             $error = 'Hash comments are prohibited; found "%s".';
-            $data  = array(trim($tokens[$stackPtr]['content']));
+            $data = array(trim($tokens[$stackPtr]['content']));
             $phpcsFile->addError($error, $stackPtr, 'Found', $data);
         }
     }

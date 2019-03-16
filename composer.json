@@ -18,7 +18,6 @@
         }
     ],
     "require": {
-        "illuminate/filesystem": "^5.8",
         "wataridori/framgia-php-codesniffer": "^0.3"
     },
     "require-dev": {},

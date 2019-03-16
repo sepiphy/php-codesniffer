@@ -9,9 +9,8 @@ To get the diff between two versions, go to https://github.com/xuanquynh/php-cod
 
 ### Unreleased
 
-  * feature [Convention] Add `DisallowHashCommentsSniff` class.
-  * feature [Convention] Add `FunctionOrMethodOrderedCommentsSniff` class.
-  * feature [Convention] Add `FunctionOrMethodParamCommentSniff` class.
-  * feature [Convention] Add `FunctionOrMethodReturnCommentSniff` class.
-  * feature [Convention] Add `FunctionOrMethodThrowsCommentSniff` class.
-  * feature [Support] Add `ComposerScript` class.
+  * feature Add `Standards\XuanQuynh\DisallowHashCommentsSniff`.
+  * feature Add `Standards\XuanQuynh\FunctionOrMethodOrderedCommentsSniff`.
+  * feature Add `Standards\XuanQuynh\FunctionOrMethodParamCommentSniff`.
+  * feature Add `Standards\XuanQuynh\FunctionOrMethodReturnCommentSniff`.
+  * feature Add `Standards\XuanQuynh\FunctionOrMethodThrowsCommentSniff`.
