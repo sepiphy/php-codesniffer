@@ -1,6 +1,6 @@
 <?php
 
-namespace XuanQuynh\CodeSniffer\Standards\XuanQuynh\Sniffs\Comments;
+namespace XuanQuynh\CodeSniffer\Standards\Laravel\Sniffs\Comments;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
@@ -24,8 +24,8 @@ class FunctionOrMethodParamCommentSniff implements Sniff
     /**
      * Processes this sniff, when one of its tokens is encountered.
      *
-     * @param  \PHP_CodeSniffer\Files\File  $phpcsFile  The current file being checked.
-     * @param  int                          $stackPtr   The position of the current token in the stack passed in $tokens.
+     * "@param"  \PHP_CodeSniffer\Files\File  $phpcsFile  The current file being checked.
+     * "@param"  int                          $stackPtr   The position of the current token in the stack passed in $tokens.
      * @return void
      */
     public function process(File $phpcsFile, $stackPtr)
@@ -37,12 +37,12 @@ class FunctionOrMethodParamCommentSniff implements Sniff
                 if ($tokens[$stackPtr]['content'] === '@param') {
                     $spaces = $tokens[$stackPtr + 1]['content'];
 
-                    if (strlen($spaces) !== 1) {
-                        $error = 'The "@param" notation must be followed by exact 1 space. Found '.strlen($spaces).' space(s).';
+                    if (strlen($spaces) !== 2) {
+                        $error = 'The "@param" notation must be followed by exact 2 spaces. Found '.strlen($spaces).' space(s).';
                         $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodParamComment');
                     }
                 } else {
-                    $error = 'The "@param" notation must be followed by exact 1 space. Found 0 space.';
+                    $error = 'The "@param" notation must be followed by exact 2 spaces. Found 0 space.';
                     $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodParamComment');
                 }
             }
@@ -53,13 +53,13 @@ class FunctionOrMethodParamCommentSniff implements Sniff
                 $dollarPos = strpos($tokens[$stackPtr]['content'], '$');
 
                 if ($spacesPos === false) {
-                    $error = 'The <datatype> after "@param" notation must be followed by exact 1 space. Found 0 space.';
+                    $error = 'The <datatype> after "@param" notation must be followed by exact 2 spaces. Found 0 space.';
                     $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodParamComment');
                 } elseif ($dollarPos < $spacesPos) {
-                    $error = 'The <datatype> after "@param" notation must be a valid type. Containing "$" character.';
+                    $error = 'The <datatype> after "@param" notation must not contain "$" character.';
                     $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodParamComment');
-                } elseif (($count = $dollarPos - $spacesPos) !== 1) {
-                    $error = 'The <datatype> after "@param" notation must be followed by exact 1 space. Found '.$count.' space(s).';
+                } elseif (($count = $dollarPos - $spacesPos) !== 2) {
+                    $error = 'The <datatype> after "@param" notation must be followed by exact 2 spaces. Found '.$count.' space(s).';
                     $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodParamComment');
                 }
             }

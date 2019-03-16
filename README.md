@@ -31,7 +31,7 @@ Check what standards are available after installing.
 
 ```bash
 vendor/bin/phpcs -i
-# The installed coding standards are PEAR, Squiz, MySource, PSR1, Zend, PSR12, PSR2, SunAsterisk and XuanQuynh
+# Additional standards: SunAsterisk, Laravel and XuanQuynh
 ```
 
 ## Usage
@@ -41,13 +41,14 @@ Check PHP coding convention of the given code directory.
 ```bash
 vendor/bin/phpcs /path/to/code --standard=SunAsterisk
 vendor/bin/phpcs /path/to/code --standard=XuanQuynh
+vendor/bin/phpcs /path/to/code --standard=Laravel
 ```
 
 ## Contributing
 
 - Thank you for considering contributing to `xuanquynh/php-codesniffer` package!
 
-- Feel free to submit an issue or a pull request about your expectation!
+- Feel free to submit an issue or a pull request for your expectation!
 
 - All contributions are welcome and accepted via pull requests.
 

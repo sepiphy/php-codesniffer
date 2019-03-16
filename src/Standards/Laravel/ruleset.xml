@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ruleset name="Laravel">
+    <description>Check PHP coding convention by CodeSniffer.</description>
+
+    <arg name="tab-width" value="4"/>
+
+    <rule ref="XuanQuynh">
+        <exclude name="XuanQuynh.Comments.FunctionOrMethodParamComment"/>
+    </rule>
+</ruleset>
