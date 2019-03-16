@@ -12,3 +12,4 @@ To get the diff between two versions, go to https://github.com/xuanquynh/php-cod
   * feature Initialize Laravel Standards.
   * feature Initialize SunAsterisk Standards.
   * feature Initialize XuanQuynh Standards.
+  * feature Support standards installation via composer.

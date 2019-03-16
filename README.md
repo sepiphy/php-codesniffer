@@ -1,11 +1,11 @@
 ## About
 
-Check PHP coding convention by CodeSniffer. Support [XuanQuynh Coding Recommendations](https://github.com/xuanquynh/coding-recommendations/).
+CodeSniffer for [XuanQuynh Coding Recommendations](https://github.com/xuanquynh/coding-recommendations/).
 
 ## Requirements
 
-- PHP: ^7.2
-- Composer: *
+- PHP ^7.1.3
+- Composer *
 
 ## Installation
 
@@ -31,7 +31,7 @@ Check what standards are available after installing.
 
 ```bash
 vendor/bin/phpcs -i
-# Additional standards: SunAsterisk, Laravel and XuanQuynh
+# Additional Standards: SunAsterisk, Laravel and XuanQuynh
 ```
 
 ## Usage

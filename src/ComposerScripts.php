@@ -1,11 +1,18 @@
-<?php
+<?php declare(strict_types=1);
+
+/*
+ * This file is part of the XuanQuynh package.
+ *
+ * (c) Quynh Xuan Nguyen <seriquynh@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace XuanQuynh\CodeSniffer;
 
 use Composer\Script\Event;
-use Illuminate\Support\ProcessUtils;
 use Symfony\Component\Process\Process;
-use Symfony\Component\Process\PhpExecutableFinder;
 
 class ComposerScripts
 {
@@ -15,7 +22,7 @@ class ComposerScripts
      * @param Event $event
      * @return void
      */
-    public static function postAutoloadDump(Event $event)
+    public static function postAutoloadDump(Event $event): void
     {
         $binDir = $event->getComposer()->getConfig()->get('bin-dir');
         $vendorDir = $event->getComposer()->getConfig()->get('vendor-dir');
@@ -23,7 +30,7 @@ class ComposerScripts
         require_once $vendorDir.'/autoload.php';
 
         $process = new Process(implode(' ', [
-            static::phpBinary(),
+            'php',
             $binDir.'/phpcs',
             '--config-set',
             'installed_paths',
@@ -31,10 +38,5 @@ class ComposerScripts
         ]));
 
         $process->run();
-    }
-
-    protected static function phpBinary()
-    {
-        return ProcessUtils::escapeArgument((new PhpExecutableFinder)->find(false));
     }
 }
