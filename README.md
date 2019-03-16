@@ -12,7 +12,7 @@ CodeSniffer for [XuanQuynh Coding Recommendations](https://github.com/xuanquynh/
 Install `xuanquynh/php-codesniffer` package via composer.
 
 ```bash
-composer require "xuanquynh/php-codesniffer:^1.0-dev" --dev
+composer require "xuanquynh/php-codesniffer:^1.0" --dev
 ```
 
 Load standards whenever `post-autoload-dump` event is triggered.
