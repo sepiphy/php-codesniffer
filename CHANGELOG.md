@@ -7,10 +7,7 @@ in 1.x minor versions.
 To get the diff for a specific change, go to https://github.com/xuanquynh/php-codesniffer/commit/XXX where XXX is the change hash.
 To get the diff between two versions, go to https://github.com/xuanquynh/php-codesniffer/compare/v1.0.0...v1.0.1
 
-### Unreleased
+### [Unreleased] v1.0.0
 
-  * feature Add `Standards\XuanQuynh\DisallowHashCommentsSniff`.
-  * feature Add `Standards\XuanQuynh\FunctionOrMethodOrderedCommentsSniff`.
-  * feature Add `Standards\XuanQuynh\FunctionOrMethodParamCommentSniff`.
-  * feature Add `Standards\XuanQuynh\FunctionOrMethodReturnCommentSniff`.
-  * feature Add `Standards\XuanQuynh\FunctionOrMethodThrowsCommentSniff`.
+  * feature Add SunAsterisk Standards.
+  * feature Add XuanQuynh Standards.
