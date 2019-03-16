@@ -22,13 +22,13 @@ class ComposerScripts
 
         require_once $vendorDir.'/autoload.php';
 
-        $process = new Process([
+        $process = new Process(implode(' ', [
             static::phpBinary(),
             $binDir.'/phpcs',
             '--config-set',
             'installed_paths',
             $vendorDir.'/xuanquynh/php-codesniffer/src/Standards',
-        ]);
+        ]));
 
         $process->run();
     }
