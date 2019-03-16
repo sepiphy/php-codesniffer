@@ -21,7 +21,7 @@ Load standards whenever `post-autoload-dump` event is triggered.
 {
     "scripts": {
         "post-autoload-dump": [
-            "@php vendor/bin/phpcs --config-set installed_paths vendor/xuanquynh/php-codesniffer/src/Standards"
+            "XuanQuynh\\CodeSniffer\\ComposerScripts::postAutoloadDump"
         ]
     }
 }
