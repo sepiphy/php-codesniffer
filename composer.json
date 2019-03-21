@@ -19,6 +19,7 @@
     ],
     "require": {
         "php": "^7.1.3",
+        "sepiphy/phptools": "^0.1",
         "wataridori/framgia-php-codesniffer": "^0.3"
     },
     "require-dev": {
@@ -39,6 +40,10 @@
         "test": [
             "@php vendor/bin/phpcs src/*.php --standard=XuanQuynh"
         ]
+    },
+    "scripts-descriptions": {
+        "fix": "Fix coding convention by php-cs-fixer",
+        "test": "Test conding convention"
     },
     "extra": {
         "branch-alias": {
