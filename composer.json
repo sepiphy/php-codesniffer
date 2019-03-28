@@ -1,7 +1,7 @@
 {
     "name": "xuanquynh/php-codesniffer",
     "description": "CodeSniffer for XuanQuynh Coding Recommendations.",
-    "keywords": ["xuanquynh", "codesniffer"],
+    "keywords": ["xuanquynh", "codesniffer", "php-codesniffer"],
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/xuanquynh/php-codesniffer",
