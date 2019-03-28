@@ -23,31 +23,25 @@
         "wataridori/framgia-php-codesniffer": "^0.3"
     },
     "require-dev": {
+        "composer/composer": "^1.8",
         "friendsofphp/php-cs-fixer": "^2.14"
     },
     "autoload": {
         "psr-4": {
-            "XuanQuynh\\CodeSniffer\\": "src/"
+            "XuanQuynh\\CodeSniffer\\": "src/XuanQuynh/CodeSniffer/"
         }
     },
     "scripts": {
-        "post-autoload-dump": [
-            "@php vendor/bin/phpcs --config-set installed_paths src/Standards"
-        ],
         "fix": [
             "@php vendor/bin/php-cs-fixer fix"
-        ],
-        "test": [
-            "@php vendor/bin/phpcs src/*.php --standard=XuanQuynh"
         ]
     },
     "scripts-descriptions": {
-        "fix": "Fix coding convention by php-cs-fixer",
-        "test": "Test conding convention"
+        "fix": "Fix coding convention by \"php-cs-fixer\"."
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.x-dev"
+            "dev-master": "1.0-dev"
         }
     },
     "config": {
