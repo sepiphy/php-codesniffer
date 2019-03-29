@@ -57,4 +57,4 @@ workflows:
     jobs:
       - php71test
       - php72test
-      - php73tes
+      - php73test
