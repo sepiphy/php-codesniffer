@@ -24,7 +24,8 @@
     },
     "require-dev": {
         "composer/composer": "^1.8",
-        "friendsofphp/php-cs-fixer": "^2.14"
+        "friendsofphp/php-cs-fixer": "^2.14",
+        "phpunit/phpunit": "^7.5"
     },
     "autoload": {
         "psr-4": {
@@ -32,12 +33,12 @@
         }
     },
     "scripts": {
-        "fix": [
-            "@php vendor/bin/php-cs-fixer fix"
-        ]
+        "fix": "@php vendor/bin/php-cs-fixer fix",
+        "test": "@php vendor/bin/phpunit"
     },
     "scripts-descriptions": {
-        "fix": "Fix coding convention by \"php-cs-fixer\"."
+        "fix": "Fix coding convention.",
+        "test": "Run the tests."
     },
     "extra": {
         "branch-alias": {

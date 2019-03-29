@@ -1,0 +1,60 @@
+version: 2
+jobs:
+  php73test:
+    docker:
+      - image: circleci/php:7.3-apache-node-browsers
+    working_directory: ~/php-codesniffer
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "composer.json" }}
+          - v1-dependencies-
+      - run: composer install -n --prefer-dist
+      - save_cache:
+          paths:
+            - ./vendor
+          key: v1-dependencies-{{ checksum "composer.json" }}
+      - run: composer run-script test
+
+  php72test:
+    docker:
+      - image: circleci/php:7.2-apache-node-browsers
+    working_directory: ~/php-codesniffer
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "composer.json" }}
+          - v1-dependencies-
+      - run: composer install -n --prefer-dist
+      - save_cache:
+          paths:
+            - ./vendor
+          key: v1-dependencies-{{ checksum "composer.json" }}
+      - run: composer run-script test
+
+  php71test:
+    docker:
+      - image: circleci/php:7.1-apache-node-browsers
+    working_directory: ~/php-codesniffer
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "composer.json" }}
+          - v1-dependencies-
+      - run: composer install -n --prefer-dist
+      - save_cache:
+          paths:
+            - ./vendor
+          key: v1-dependencies-{{ checksum "composer.json" }}
+      - run: composer run-script test
+
+workflows:
+  version: 2
+  testall:
+    jobs:
+      - php71test
+      - php72test
+      - php73tes

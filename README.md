@@ -31,7 +31,7 @@ Check what standards are available after installing.
 
 ```bash
 vendor/bin/phpcs -i
-# Additional Standards: SunAsterisk, Laravel and XuanQuynh
+# You may these additional standards: SunAsterisk, Laravel and XuanQuynh.
 ```
 
 ## Usage
