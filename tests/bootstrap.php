@@ -14,7 +14,7 @@ require_once __DIR__.'/../vendor/squizlabs/php_codesniffer/tests/bootstrap.php';
 // Add customized standards.
 PHP_CodeSniffer\Config::setConfigData(
     'installed_paths',
-    __DIR__.'/../src/XuanQuynh/CodeSniffer/Standards',
+    __DIR__.'/../src/Standards',
     true
 );
 

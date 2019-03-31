@@ -34,7 +34,7 @@ class ComposerScripts
             $binDir.'/phpcs',
             '--config-set',
             'installed_paths',
-            $vendorDir.'/xuanquynh/php-codesniffer/src/XuanQuynh/CodeSniffer/Standards',
+            $vendorDir.'/xuanquynh/php-codesniffer/src/Standards',
         ])->run();
     }
 }
