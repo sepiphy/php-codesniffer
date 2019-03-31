@@ -12,7 +12,7 @@
 namespace XuanQuynh\CodeSniffer;
 
 use Composer\Script\Event;
-use Sepiphy\PHPTools\ProcessUtils;
+use Symfony\Component\Process\PhpExecutableFinder;
 
 class ComposerScripts
 {
@@ -29,12 +29,21 @@ class ComposerScripts
 
         require_once $vendorDir.'/autoload.php';
 
-        ProcessUtils::createProcess([
-            ProcessUtils::phpBinary(),
+        $command = [
+            (new PhpExecutableFinder)->find(false), // php birary
             $binDir.'/phpcs',
             '--config-set',
             'installed_paths',
             $vendorDir.'/xuanquynh/php-codesniffer/src/Standards',
-        ])->run();
+        ];
+
+        // symfony/process +4.2
+        if (function_exists(Process::class.'::fromShellCommandline')) {
+            $process = new Process($command);
+        } else {
+            $process = new Process(implode(' ', $command));
+        }
+
+        $process->run();
     }
 }
