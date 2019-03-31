@@ -12,6 +12,7 @@
 namespace XuanQuynh\CodeSniffer;
 
 use Composer\Script\Event;
+use Symfony\Component\Process\Process;
 use Symfony\Component\Process\PhpExecutableFinder;
 
 class ComposerScripts
