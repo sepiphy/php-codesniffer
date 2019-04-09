@@ -13,7 +13,7 @@
 >
     <testsuites>
         <testsuite name="XuanQuynh Coding Standard Test Suite">
-            <file>tests/RunAllTests.php</file>
+            <file>tests/tests.php</file>
         </testsuite>
     </testsuites>
 </phpunit>

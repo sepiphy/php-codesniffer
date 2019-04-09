@@ -1,7 +1,7 @@
 {
     "name": "xuanquynh/php-codesniffer",
     "description": "CodeSniffer for XuanQuynh Coding Recommendations.",
-    "keywords": ["xuanquynh", "codesniffer", "php-codesniffer"],
+    "keywords": ["xuanquynh", "codesniffer", "php-codesniffer", "coding", "coding-convention"],
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/xuanquynh/php-codesniffer",
@@ -24,7 +24,8 @@
     "require-dev": {
         "composer/composer": "^1.8",
         "friendsofphp/php-cs-fixer": "^2.14",
-        "phpunit/phpunit": "^7.5"
+        "phpunit/phpunit": "^7.5",
+        "symfony/var-dumper": "^4.2"
     },
     "autoload": {
         "psr-4": {
@@ -32,12 +33,15 @@
         }
     },
     "scripts": {
+        "post-autoload-dump": [
+            "XuanQuynh\\CodeSniffer\\ComposerScripts::loadStandards"
+        ],
         "fix": "@php vendor/bin/php-cs-fixer fix",
         "test": "@php vendor/bin/phpunit"
     },
     "scripts-descriptions": {
         "fix": "Fix coding convention.",
-        "test": "Run the tests."
+        "test": "Run unit tests."
     },
     "extra": {
         "branch-alias": {
