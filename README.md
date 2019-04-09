@@ -5,42 +5,32 @@ CodeSniffer for [XuanQuynh Coding Recommendations](https://github.com/xuanquynh/
 ## Requirements
 
 - PHP ^7.1.3
+
 ## Installation
 
-Install `xuanquynh/php-codesniffer` package via composer.
+Install `xuanquynh/php-codesniffer` package globally via composer.
 
-```bash
-composer require "xuanquynh/php-codesniffer:^1.2" --dev
-```
+    $ composer global require "xuanquynh/php-codesniffer:^1.2" --dev
 
 Load standards whenever `post-autoload-dump` event is triggered.
 
-```json
-{
-    "scripts": {
-        "post-autoload-dump": [
-            "XuanQuynh\\CodeSniffer\\ComposerScripts::loadStandards"
-        ]
-    }
-}
-```
+> You have to add `XuanQuynh\\CodeSniffer\\ComposerScripts::loadStandards` to `composer.json` file manually if `scripts.post-autoload-dump` has been already defined.
+
+    $ composer global config scripts.post-autoload-dump "XuanQuynh\\CodeSniffer\\ComposerScripts::loadStandards"
 
 Check what standards are available after installing.
 
-```bash
-vendor/bin/phpcs -i
-# You may see these additional standards: SunAsterisk, Laravel and XuanQuynh.
-```
+    $ phpcs -i # These are additional standards: SunAsterisk, XuanQuynh and Laravel.
 
 ## Usage
 
 Check PHP coding convention of the given code directory.
 
-```bash
-vendor/bin/phpcs /path/to/code --standard=SunAsterisk
-vendor/bin/phpcs /path/to/code --standard=XuanQuynh
-vendor/bin/phpcs /path/to/code --standard=Laravel
-```
+    $ phpcs /path/to/code --standard=SunAsterisk
+    $ phpcs /path/to/code --standard=XuanQuynh
+    $ phpcs /path/to/code --standard=Laravel
+
+> To use `xuanquynh/php-codesniffer` package locally via composer, you just need to run composer without "global" command.
 
 ## Contributing
 

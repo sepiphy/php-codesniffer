@@ -33,11 +33,9 @@
         }
     },
     "scripts": {
-        "post-autoload-dump": [
-            "XuanQuynh\\CodeSniffer\\ComposerScripts::loadStandards"
-        ],
         "fix": "@php vendor/bin/php-cs-fixer fix",
-        "test": "@php vendor/bin/phpunit"
+        "test": "@php vendor/bin/phpunit",
+        "post-autoload-dump": "XuanQuynh\\CodeSniffer\\ComposerScripts::loadStandards"
     },
     "scripts-descriptions": {
         "fix": "Fix coding convention.",
