@@ -53,7 +53,7 @@ class ComposerScripts
 
         require_once $vendorDir.'/squizlabs/php_codesniffer/autoload.php';
 
-        $currentPackageName = json_decode(file_get_contents($baseDir.'/composer.json'), true)['name'];
+        $currentPackageName = json_decode(file_get_contents($baseDir.'/composer.json'), true)['name'] ?? null;
 
         if ($currentPackageName === 'xuanquynh/php-codesniffer') {
             $xqStandardsPath = $baseDir.'/src/Standards';
