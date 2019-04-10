@@ -33,15 +33,15 @@
         }
     },
     "scripts": {
-        "fix": "@php vendor/bin/php-cs-fixer fix",
-        "test": "@php vendor/bin/phpunit",
+        "fix": "php-cs-fixer fix",
+        "test": "phpunit",
         "post-autoload-dump": [
             "XuanQuynh\\CodeSniffer\\ComposerScripts::loadStandards"
         ]
     },
     "scripts-descriptions": {
-        "fix": "Fix coding convention.",
-        "test": "Run unit tests."
+        "fix": "Fix the coding convention.",
+        "test": "Run the unit tests."
     },
     "extra": {
         "branch-alias": {
