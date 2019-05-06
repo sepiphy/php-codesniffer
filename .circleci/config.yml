@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  php73test:
+  php7.3:
     docker:
       - image: circleci/php:7.3-apache-node-browsers
     working_directory: ~/php-codesniffer
@@ -17,7 +17,7 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
       - run: composer run-script test
 
-  php72test:
+  php7.2:
     docker:
       - image: circleci/php:7.2-apache-node-browsers
     working_directory: ~/php-codesniffer
@@ -34,7 +34,7 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
       - run: composer run-script test
 
-  php71test:
+  php7.1:
     docker:
       - image: circleci/php:7.1-apache-node-browsers
     working_directory: ~/php-codesniffer
@@ -49,12 +49,12 @@ jobs:
           paths:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
-      - run: composer run-script test
+      - run: composer run test
 
 workflows:
   version: 2
   testall:
     jobs:
-      - php71test
-      - php72test
-      - php73test
+      - php7.1
+      - php7.2
+      - php7.3

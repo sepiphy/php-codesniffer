@@ -38,12 +38,8 @@ Check PHP coding convention of the given code directory.
 
 ## Contributing
 
-Thank you for considering contributing to `xuanquynh/php-codesniffer` package.
-
-Feel free to submit an issue or a pull request for your expectation.
-
-All contributions are welcome and accepted via pull requests.
+Please read the [contribution guide](https://seriquynh.com/oss?project=xuanquynh/php-codesniffer) for more information.
 
 ## License
 
-The `xuanquynh/php-codesniffer` package is open-sourced software licensed under the [MIT license](LICENSE.md).
+This project is open-sourced software licensed under the [MIT license](LICENSE.md).

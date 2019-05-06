@@ -13,7 +13,7 @@
         {
             "name": "Quynh Xuan Nguyen",
             "email": "seriquynh@gmail.com",
-            "homepage": "http://seriquynh.com",
+            "homepage": "https://seriquynh.com",
             "role": "Software Developer"
         }
     ],
@@ -40,8 +40,8 @@
         ]
     },
     "scripts-descriptions": {
-        "fix": "Fix the coding convention.",
-        "test": "Run the unit tests."
+        "fix": "Fix code.",
+        "test": "Run tests."
     },
     "extra": {
         "branch-alias": {
