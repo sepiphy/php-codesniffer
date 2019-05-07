@@ -10,7 +10,7 @@ CodeSniffer for [XuanQuynh Coding Recommendations](https://github.com/xuanquynh/
 
 Install `xuanquynh/php-codesniffer` package via composer.
 
-    $ composer require "xuanquynh/php-codesniffer:^1.2" --dev
+    $ composer require "xuanquynh/php-codesniffer:1.2.*" --dev
 
 Define the `load-coding-standards` composer script and execute it.
 
