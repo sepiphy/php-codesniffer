@@ -12,17 +12,18 @@ Install `xuanquynh/php-codesniffer` package via composer.
 
     $ composer require "xuanquynh/php-codesniffer:^1.2" --dev
 
-Load standards whenever `post-autoload-dump` event is triggered.
+Define the `load-coding-standards` composer script and execute it.
 
 ```json
 {
     "scripts": {
-        "post-autoload-dump": [
+        "load-coding-standards": [
             "XuanQuynh\\CodeSniffer\\ComposerScripts::loadStandards"
         ]
     }
 }
 ```
+    $ composer run load-coding-standards
 
 Check what standards are available after installing.
 

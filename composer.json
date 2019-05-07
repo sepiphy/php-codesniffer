@@ -35,13 +35,7 @@
     "scripts": {
         "fix": "php-cs-fixer fix",
         "test": "phpunit",
-        "post-autoload-dump": [
-            "XuanQuynh\\CodeSniffer\\ComposerScripts::loadStandards"
-        ]
-    },
-    "scripts-descriptions": {
-        "fix": "Fix code.",
-        "test": "Run tests."
+        "load-coding-standards": "XuanQuynh\\CodeSniffer\\ComposerScripts::loadStandards"
     },
     "extra": {
         "branch-alias": {
