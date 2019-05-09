@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <ruleset name="SunAsterisk">
     <description>
-        The Coding Standard package for Code Sniffer to check whether your codes satisfy the SunAsterisk Standards.
+        Check PHP coding convention with "SunAsterisk" standards.
     </description>
     <arg name="tab-width" value="4"/>
 
