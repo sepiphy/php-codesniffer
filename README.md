@@ -1,3 +1,6 @@
+![CircleCI (all branches)](https://img.shields.io/circleci/project/github/xuanquynh/php-codesniffer.svg)
+![Packagist](https://img.shields.io/packagist/dt/xuanquynh/php-codesniffer.svg)
+
 ## About
 
 CodeSniffer for [XuanQuynh Coding Recommendations](https://github.com/xuanquynh/coding-recommendations/).
