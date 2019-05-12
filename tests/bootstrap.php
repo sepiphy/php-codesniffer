@@ -9,24 +9,6 @@
  * file that was distributed with this source code.
  */
 
-require_once __DIR__.'/../vendor/squizlabs/php_codesniffer/tests/bootstrap.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
-// Add customized standards.
-PHP_CodeSniffer\Config::setConfigData(
-    'installed_paths',
-    __DIR__.'/../src/Standards',
-    true
-);
-
-// Ignore other standards.
-$standards = PHP_CodeSniffer\Util\Standards::getInstalledStandards();
-$standards[] = 'Generic';
-
-$customizedStandards = ['SunAsterisk', 'XuanQuynh', 'Laravel'];
-$ignoredStandardsStr = implode(
-    ',',
-    array_filter($standards, function ($standard) use ($customizedStandards) {
-        return !in_array($standard, $customizedStandards);
-    })
-);
-putenv("PHPCS_IGNORE_TESTS={$ignoredStandardsStr}");
+date_default_timezone_set('UTC');
