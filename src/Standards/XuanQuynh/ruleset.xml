@@ -6,7 +6,6 @@
 
     <arg name="tab-width" value="4"/>
 
-    <rule ref="Symfony"/>
     <rule ref="SunAsterisk">
         <exclude name="PSR2.Methods.FunctionCallSignature"/>
     </rule>
