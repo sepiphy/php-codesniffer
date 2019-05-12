@@ -3,7 +3,7 @@
 ![Packagist Version](https://img.shields.io/packagist/v/xuanquynh/php-codesniffer.svg?label=version)
 ![GitHub](https://img.shields.io/github/license/xuanquynh/php-codesniffer.svg)
 
-CodeSniffer for [XuanQuynh Coding Recommendations](https://github.com/xuanquynh/coding-recommendations/).
+CodeSniffer for [XuanQuynh Coding Recommendations](https://github.com/xuanquynh/coding-recommendations).
 
 ## Requirements
 
@@ -13,24 +13,16 @@ CodeSniffer for [XuanQuynh Coding Recommendations](https://github.com/xuanquynh/
 
 Install `xuanquynh/php-codesniffer` package via composer.
 
-    $ composer require "xuanquynh/php-codesniffer:1.2.*" --dev
+    $ composer require xuanquynh/php-codesniffer --dev
 
-Define the `load-coding-standards` composer script and execute it.
+Configure `installed_path` to help `phpcs` know where to load sniffers.
 
-```json
-{
-    "scripts": {
-        "load-coding-standards": [
-            "XuanQuynh\\CodeSniffer\\ComposerScripts::loadStandards"
-        ]
-    }
-}
-```
-    $ composer run load-coding-standards
+    $ vendor/bin/phpcs --config-set installed_paths vendor/escapestudios/symfony2-coding-standard,vendor/xuanquynh/php-codesniffer/src/Standards
 
 Check what standards are available after installing.
 
-    $ vendor/bin/phpcs -i # These are additional standards: SunAsterisk, XuanQuynh and Laravel.
+    $ vendor/bin/phpcs -i
+    $ The installed coding standards are PEAR, Squiz, MySource, PSR1, Zend, PSR12, PSR2, Symfony, SunAsterisk, Laravel and XuanQuynh
 
 ## Usage
 
@@ -42,8 +34,8 @@ Check PHP coding convention of the given code directory.
 
 ## Contributing
 
-Please read the [contribution guide](https://seriquynh.com/oss?project=xuanquynh/php-codesniffer) for more information.
+Please read the [contribution guide](https://seriquynh.com/oss/contributing?github=xuanquynh/php-codesniffer) for more information.
 
 ## License
 
-This project is open-sourced software licensed under the [MIT license](LICENSE.md).
+Please read the [MIT license](LICENSE.md) for more information.
