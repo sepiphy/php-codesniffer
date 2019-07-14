@@ -26,14 +26,6 @@ Check what standards are available after installing.
 
 ## Usage
 
-Check PHP coding convention of the given code directory.
+Check PHP coding conventions of the given code directory.
 
     $ vendor/bin/phpcs /path/to/code --standard=XuanQuynh
-
-## Contributing
-
-Please read the [contribution guide](https://seriquynh.com/oss/contributing?github=xuanquynh/php-codesniffer) for more information.
-
-## License
-
-Please read the [MIT license](LICENSE.md) for more information.

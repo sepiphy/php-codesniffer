@@ -1,7 +1,14 @@
 {
     "name": "xuanquynh/php-codesniffer",
     "description": "CodeSniffer for XuanQuynh Coding Recommendations.",
-    "keywords": ["xuanquynh", "codesniffer", "php-codesniffer", "coding", "coding-convention"],
+    "keywords": [
+        "xuanquynh",
+        "codesniffer",
+        "php-codesniffer",
+        "coding",
+        "coding-conventions",
+        "coding-standards"
+    ],
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/xuanquynh/php-codesniffer",
@@ -22,10 +29,9 @@
         "wataridori/framgia-php-codesniffer": "^0.3"
     },
     "require-dev": {
-        "composer/composer": "^1.8",
         "friendsofphp/php-cs-fixer": "^2.14",
         "phpunit/phpunit": "^7.5",
-        "symfony/var-dumper": "^4.2"
+        "symfony/var-dumper": "^4.3"
     },
     "autoload": {
         "psr-4": {
