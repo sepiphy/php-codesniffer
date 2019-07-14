@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <ruleset name="SunAsterisk">
     <description>
-        Check PHP coding convention with "SunAsterisk" standards.
+        Check PHP coding conventions with "SunAsterisk" standards.
     </description>
     <arg name="tab-width" value="4"/>
 
