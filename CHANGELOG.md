@@ -1,6 +1,6 @@
 ## CHANGELOG v2
 
-### [Unreleased] v2.2.0 (2019-07-20)
+### v2.2.0 (2019-07-20)
 
   * Add "xphpcs" and "xphpcbf" scripts that load standards automatically.
 
