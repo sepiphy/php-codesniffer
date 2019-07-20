@@ -1,0 +1,38 @@
+#!/usr/bin/env php
+<?php declare(strict_types=1);
+
+/*
+ * This file is part of the XuanQuynh package.
+ *
+ * (c) Quynh Xuan Nguyen <seriquynh@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+$vendorDir = null;
+$installedPathsAsString = null;
+
+foreach ([
+    __DIR__.'/../vendor/squizlabs/php_codesniffer/autoload.php',
+    __DIR__.'/../../../squizlabs/php_codesniffer/autoload.php',
+] as $autoloadFilePath) {
+    if (is_file($autoloadFilePath)) {
+        require $autoloadFilePath;
+        $vendorDir = dirname($autoloadFilePath);
+        break;
+    }
+}
+
+if (is_dir(__DIR__.'/../src/Standards')) {
+    $installedPathsAsString = __DIR__.'/../src/Standards';
+} else {
+    $installedPathsAsString = $vendorDir.'/xuanquynh/php-codesniffer/src/Standards';
+}
+
+// Add customized standards.
+PHP_CodeSniffer\Config::setConfigData('installed_paths', $installedPathsAsString, true);
+
+$runner = new PHP_CodeSniffer\Runner();
+$exitCode = $runner->runPHPCBF();
+exit($exitCode);

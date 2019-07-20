@@ -15,17 +15,14 @@ Install `xuanquynh/php-codesniffer` package via composer.
 
     $ composer require xuanquynh/php-codesniffer --dev
 
-Configure `installed_path` to help `phpcs` load customized sniffers.
-
-    $ vendor/bin/phpcs --config-set installed_paths vendor/escapestudios/symfony2-coding-standard,vendor/xuanquynh/php-codesniffer/src/Standards
-
 Check what standards are available after installing.
 
-    $ vendor/bin/phpcs -i
+    $ vendor/bin/xphpcs -i
     $ The installed coding standards are PEAR, Squiz, MySource, PSR1, Zend, PSR12, PSR2, Symfony, SunAsterisk, Laravel and XuanQuynh
 
 ## Usage
 
 Check PHP coding conventions of the given code directory.
 
-    $ vendor/bin/phpcs /path/to/code --standard=XuanQuynh
+    $ vendor/bin/xphpcs /path/to/code --standard=XuanQuynh
+    $ vendor/bin/xphpcbf /path/to/code --standard=XuanQuynh

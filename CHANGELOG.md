@@ -1,5 +1,9 @@
 ## CHANGELOG v2
 
+### [Unreleased] v2.2.0 (2019-07-20)
+
+  * Add "xphpcs" and "xphpcbf" scripts that load standards automatically.
+
 ### v2.1.0 (2019-07-14)
 
   * Add "Symfony.Objects.ObjectInstantiation" of XuanQuynh Coding Standards.
