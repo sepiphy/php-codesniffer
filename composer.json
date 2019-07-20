@@ -50,6 +50,10 @@
     "config": {
         "sort-packages": true
     },
+    "bin": [
+        "bin/xphpcs",
+        "bin/xphpcbf"
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }
