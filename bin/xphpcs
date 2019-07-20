@@ -11,7 +11,7 @@
  */
 
 $vendorDir = null;
-$installedPathsAsString = null;
+$installedPaths = null;
 
 foreach ([
     __DIR__.'/../vendor/squizlabs/php_codesniffer/autoload.php',
@@ -19,19 +19,25 @@ foreach ([
 ] as $autoloadFilePath) {
     if (is_file($autoloadFilePath)) {
         require $autoloadFilePath;
-        $vendorDir = dirname($autoloadFilePath);
+        $vendorDir = dirname($autoloadFilePath).'/../..';
         break;
     }
 }
 
 if (is_dir(__DIR__.'/../src/Standards')) {
-    $installedPathsAsString = __DIR__.'/../src/Standards';
+    $installedPaths = [
+        realpath($vendorDir.'/escapestudios/symfony2-coding-standard'),
+        realpath(__DIR__.'/../src/Standards'),
+    ];
 } else {
-    $installedPathsAsString = $vendorDir.'/xuanquynh/php-codesniffer/src/Standards';
+    $installedPaths = [
+        realpath($vendorDir.'/escapestudios/symfony2-coding-standard'),
+        realpath($vendorDir.'/xuanquynh/php-codesniffer/src/Standards'),
+    ];
 }
 
 // Add customized standards.
-PHP_CodeSniffer\Config::setConfigData('installed_paths', $installedPathsAsString, true);
+PHP_CodeSniffer\Config::setConfigData('installed_paths', implode(',', $installedPaths), true);
 
 $runner = new PHP_CodeSniffer\Runner();
 $exitCode = $runner->runPHPCS();
