@@ -3,7 +3,7 @@
 ![Packagist Version](https://img.shields.io/packagist/v/xuanquynh/php-codesniffer.svg?label=version)
 ![GitHub](https://img.shields.io/github/license/xuanquynh/php-codesniffer.svg)
 
-CodeSniffer for [XuanQuynh Coding Recommendations](https://github.com/xuanquynh/coding-recommendations).
+CodeSniffer for [XuanQuynh Coding Recommendations](https://github.com/xuanquynh/coding-recommendations)
 
 ## Requirements
 
