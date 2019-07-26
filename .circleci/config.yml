@@ -15,7 +15,7 @@ jobs:
           paths:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
-      - run: composer run-script test
+      - run: composer run test
 
   php7.2:
     docker:
@@ -32,7 +32,7 @@ jobs:
           paths:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
-      - run: composer run-script test
+      - run: composer run test
 
   php7.1:
     docker:
