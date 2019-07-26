@@ -22,7 +22,10 @@ Check what standards are available after installing.
 
 ## Usage
 
-Check PHP coding conventions of the given code directory.
+Check PHP coding conventions of the given directory.
 
-    $ vendor/bin/xphpcs /path/to/code --standard=XuanQuynh
-    $ vendor/bin/xphpcbf /path/to/code --standard=XuanQuynh
+    $ vendor/bin/xphpcs /path/to/source --standard=XuanQuynh
+    
+Fix PHP coding conventions of the given directory.
+
+    $ vendor/bin/xphpcbf /path/to/source --standard=XuanQuynh
