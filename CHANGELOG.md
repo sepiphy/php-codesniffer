@@ -1,6 +1,6 @@
 ## CHANGELOG v2
 
-### [Unreleased] v2.3.0 (2019-08-17)
+### v2.3.0 (2019-08-17)
 
   * Add "php-cs-fixer.php" file to provide common fixer.
 
