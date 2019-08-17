@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 /*
- * This file is part of the XuanQuynh package.
+ * This file is part of the xuanquynh/php-codesniffer package.
  *
  * (c) Quynh Xuan Nguyen <seriquynh@gmail.com>
  *
@@ -11,8 +11,8 @@
 
 namespace XuanQuynh\CodeSniffer\Standards\XuanQuynh\Sniffs\Comments;
 
-use PHP_CodeSniffer\Sniffs\Sniff;
 use PHP_CodeSniffer\Files\File;
+use PHP_CodeSniffer\Sniffs\Sniff;
 
 class DisallowHashCommentsSniff implements Sniff
 {

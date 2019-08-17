@@ -1,7 +1,7 @@
 <?php
 
 $header = <<<EOF
-This file is part of the XuanQuynh package.
+This file is part of the xuanquynh/php-codesniffer package.
 
 (c) Quynh Xuan Nguyen <seriquynh@gmail.com>
 
@@ -12,19 +12,7 @@ EOF;
 $finder = PhpCsFixer\Finder::create()
     ->files()
     ->name('*.php')
-    ->in(__DIR__.'/src')
-    ->in(__DIR__.'/tests')
-;
+    ->in(__DIR__ . '/src')
+    ->in(__DIR__ . '/tests');
 
-return PhpCsFixer\Config::create()
-    ->setUsingCache(true)
-    ->setRiskyAllowed(true)
-    ->setFinder($finder)
-    ->setRules([
-        '@PSR2' => true,
-        'array_syntax' => ['syntax' => 'short'],
-        'declare_strict_types' => true,
-        'header_comment' => ['header' => $header],
-        'no_unused_imports' => true,
-    ])
-;
+return require __DIR__ . '/php-cs-fixer.php';

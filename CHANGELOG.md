@@ -1,5 +1,9 @@
 ## CHANGELOG v2
 
+### [Unreleased] v2.3.0 (2019-08-17)
+
+  * Add "php-cs-fixer.php" file to provide common fixer.
+
 ### v2.2.0 (2019-07-20)
 
   * Add "xphpcs" and "xphpcbf" scripts that load standards automatically.
