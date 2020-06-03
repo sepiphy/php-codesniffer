@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 /*
- * This file is part of the xuanquynh/php-codesniffer package.
+ * This file is part of the Sepiphy package.
  *
  * (c) Quynh Xuan Nguyen <seriquynh@gmail.com>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace XuanQuynh\CodeSniffer\Standards\Laravel\Sniffs\Comments;
+namespace Sepiphy\CodeSniffer\Standards\Laravel\Sniffs\Comments;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;

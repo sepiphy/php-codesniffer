@@ -1,8 +1,8 @@
 {
-    "name": "xuanquynh/php-codesniffer",
-    "description": "CodeSniffer for XuanQuynh Coding Recommendations.",
+    "name": "sepiphy/php-codesniffer",
+    "description": "CodeSniffer for Sepiphy Coding Recommendations.",
     "keywords": [
-        "xuanquynh",
+        "sepiphy",
         "codesniffer",
         "php-codesniffer",
         "coding",
@@ -11,10 +11,10 @@
     ],
     "type": "library",
     "license": "MIT",
-    "homepage": "https://github.com/xuanquynh/php-codesniffer",
+    "homepage": "https://github.com/sepiphy/php-codesniffer",
     "support": {
-        "issues": "https://github.com/xuanquynh/php-codesniffer/issues",
-        "source": "https://github.com/xuanquynh/php-codesniffer"
+        "issues": "https://github.com/sepiphy/php-codesniffer/issues",
+        "source": "https://github.com/sepiphy/php-codesniffer"
     },
     "authors": [
         {
@@ -35,7 +35,7 @@
     },
     "autoload": {
         "psr-4": {
-            "XuanQuynh\\CodeSniffer\\": "src/"
+            "Sepiphy\\CodeSniffer\\": "src/"
         }
     },
     "scripts": {

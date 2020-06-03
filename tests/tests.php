@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 /*
- * This file is part of the xuanquynh/php-codesniffer package.
+ * This file is part of the Sepiphy package.
  *
  * (c) Quynh Xuan Nguyen <seriquynh@gmail.com>
  *
@@ -22,7 +22,7 @@ PHP_CodeSniffer\Config::setConfigData(
 $standards = PHP_CodeSniffer\Util\Standards::getInstalledStandards();
 $standards[] = 'Generic';
 
-$customizedStandards = ['SunAsterisk', 'XuanQuynh', 'Laravel'];
+$customizedStandards = ['SunAsterisk', 'Sepiphy', 'Laravel'];
 $ignoredStandardsStr = implode(
     ',',
     array_filter($standards, function ($standard) use ($customizedStandards) {

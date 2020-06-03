@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 /*
- * This file is part of the xuanquynh/php-codesniffer package.
+ * This file is part of the Sepiphy package.
  *
  * (c) Quynh Xuan Nguyen <seriquynh@gmail.com>
  *
@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace XuanQuynh\CodeSniffer\Standards\XuanQuynh\Sniffs\Comments;
+namespace Sepiphy\CodeSniffer\Standards\Sepiphy\Sniffs\Comments;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
-class FunctionOrMethodThrowsCommentSniff implements Sniff
+class FunctionOrMethodReturnCommentSniff implements Sniff
 {
     /**
      * Returns the token types that this sniff is interested in.
@@ -41,17 +41,19 @@ class FunctionOrMethodThrowsCommentSniff implements Sniff
     {
         $tokens = $phpcsFile->getTokens();
 
-        if (strpos($tokens[$stackPtr]['content'], '@throws') === 0) {
-            if ($tokens[$stackPtr]['content'] === '@throws') {
-                $spaces = $tokens[$stackPtr + 1]['content'];
+        if ($tokens[$stackPtr]['code'] === T_DOC_COMMENT_TAG) {
+            if (strpos($tokens[$stackPtr]['content'], '@return') === 0) {
+                if ($tokens[$stackPtr]['content'] === '@return') {
+                    $spaces = $tokens[$stackPtr + 1]['content'];
 
-                if (strlen($spaces) !== 1) {
-                    $error = 'The notation "@throws" must be followed by exact 1 space. Found '.strlen($spaces).' space(s).';
-                    $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodThrowsComment');
+                    if (strlen($spaces) !== 1) {
+                        $error = 'The notation "@return" must be followed by exact 1 space. Found '.strlen($spaces).' space(s).';
+                        $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodReturnComment');
+                    }
+                } else {
+                    $error = 'The notation "@return" must be followed by exact 1 space. Found 0 space.';
+                    $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodReturnComment');
                 }
-            } else {
-                $error = 'The notation "@throws" must be followed by exact 1 space. Found 0 space.';
-                $phpcsFile->addError($error, $stackPtr, 'FunctionOrMethodThrowsComment');
             }
         }
     }

@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 /*
- * This file is part of the xuanquynh/php-codesniffer package.
+ * This file is part of the Sepiphy package.
  *
  * (c) Quynh Xuan Nguyen <seriquynh@gmail.com>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace XuanQuynh\CodeSniffer\Standards\XuanQuynh\Tests\Comments;
+namespace Sepiphy\CodeSniffer\Standards\Sepiphy\Tests\Comments;
 
 use PHP_CodeSniffer\Tests\Standards\AbstractSniffUnitTest;
 
