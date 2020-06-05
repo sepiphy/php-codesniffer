@@ -51,8 +51,8 @@
         "sort-packages": true
     },
     "bin": [
-        "bin/xphpcs",
-        "bin/xphpcbf"
+        "bin/sphpcs",
+        "bin/sphpcbf"
     ],
     "minimum-stability": "dev",
     "prefer-stable": true
