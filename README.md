@@ -6,7 +6,7 @@ CodeSniffer for [Sepiphy Coding Recommendations](https://github.com/sepiphy/codi
 
 ## Requirements
 
-- PHP ^7.1.3
+- PHP >=7.1.3
 
 ## Installation
 
@@ -16,15 +16,15 @@ Install `sepiphy/php-codesniffer` package via composer.
 
 Check what standards are available after installing.
 
-    $ vendor/bin/xphpcs -i
+    $ vendor/bin/sphpcs -i
     $ The installed coding standards are MySource, PEAR, PSR1, PSR12, PSR2, Squiz, Zend, Symfony, Laravel, Sepiphy and SunAsterisk
 
 ## Usage
 
 Check PHP coding conventions of the given directory.
 
-    $ vendor/bin/xphpcs /path/to/source --standard=Sepiphy
+    $ vendor/bin/sphpcs /path/to/source --standard=Sepiphy
 
 Fix PHP coding conventions of the given directory.
 
-    $ vendor/bin/xphpcbf /path/to/source --standard=Sepiphy
+    $ vendor/bin/sphpcbf /path/to/source --standard=Sepiphy
