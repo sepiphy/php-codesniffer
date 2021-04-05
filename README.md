@@ -15,7 +15,7 @@ Install `sepiphy/php-codesniffer` package via composer.
 
     $ composer require sepiphy/php-codesniffer --dev
 
-Check what standards are available after installing.
+Verify that our custom standards are available after installing.
 
     $ vendor/bin/sphpcs -i
     $ The installed coding standards are MySource, PEAR, PSR1, PSR12, PSR2, Squiz, Zend, Symfony, Laravel, Sepiphy and SunAsterisk
