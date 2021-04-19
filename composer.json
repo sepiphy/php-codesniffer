@@ -1,6 +1,6 @@
 {
     "name": "sepiphy/php-codesniffer",
-    "description": "CodeSniffer for Sepiphy Coding Recommendations.",
+    "description": "Check and Fix php coding conventions",
     "keywords": [
         "sepiphy",
         "codesniffer",

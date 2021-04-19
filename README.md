@@ -1,15 +1,10 @@
+> This package is no longer supported any more. You should refer Laravel, Symfony or any other popular community coding conventions.
+
 # Check and Fix php coding conventions
 
-![Tests](https://github.com/sepiphy/php-codesniffer/workflows/Tests/badge.svg?branch=master)
 ![Packagist](https://img.shields.io/packagist/dt/sepiphy/php-codesniffer.svg)
 ![Packagist Version](https://img.shields.io/packagist/v/sepiphy/php-codesniffer?label=version)
 ![GitHub](https://img.shields.io/github/license/sepiphy/php-codesniffer.svg)
-
-CodeSniffer for [Sepiphy Coding Recommendations](https://github.com/sepiphy/coding-recommendations)
-
-## Requirements
-
-- PHP >=7.1.3
 
 ## Installation
 
