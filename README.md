@@ -1,3 +1,5 @@
+# Check and Fix php coding conventions
+
 ![Tests](https://github.com/sepiphy/php-codesniffer/workflows/Tests/badge.svg?branch=master)
 ![Packagist](https://img.shields.io/packagist/dt/sepiphy/php-codesniffer.svg)
 ![Packagist Version](https://img.shields.io/packagist/v/sepiphy/php-codesniffer?label=version)
@@ -11,7 +13,7 @@ CodeSniffer for [Sepiphy Coding Recommendations](https://github.com/sepiphy/codi
 
 ## Installation
 
-Install `sepiphy/php-codesniffer` package via composer.
+Install this package via composer:
 
     $ composer require sepiphy/php-codesniffer --dev
 
@@ -22,10 +24,10 @@ Verify that our custom standards are available after installing.
 
 ## Usage
 
-Check PHP coding conventions of the given directory.
+Check PHP coding conventions of the given directory:
 
     $ vendor/bin/sphpcs /path/to/source --standard=Sepiphy
 
-Fix PHP coding conventions of the given directory.
+Fix PHP coding conventions of the given directory:
 
     $ vendor/bin/sphpcbf /path/to/source --standard=Sepiphy
