@@ -1,6 +1,6 @@
 {
     "name": "sepiphy/php-codesniffer",
-    "description": "CodeSniffer for Sepiphy Coding Recommendations.",
+    "description": "Check and Fix php coding conventions",
     "keywords": [
         "sepiphy",
         "codesniffer",
@@ -23,15 +23,13 @@
         }
     ],
     "require": {
-        "php": ">=7.1.3",
-        "escapestudios/symfony2-coding-standard": "^3.8",
+        "php": "^7.1.3 | ^8.0",
         "friendsofphp/php-cs-fixer": "^2.15",
-        "squizlabs/php_codesniffer": "^3.4",
+        "squizlabs/php_codesniffer": "^3.6",
         "wataridori/framgia-php-codesniffer": "^0.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.5",
-        "symfony/var-dumper": "^4.3"
+        "phpunit/phpunit": "^7.5"
     },
     "autoload": {
         "psr-4": {
